@@ -2,6 +2,15 @@
 
 The Soroban Raycast Extension is a powerful productivity tool designed to simplify development workflows for builders working with the Stellar network and Soroban smart contracts. It offers a user-friendly, unified interface within the Raycast application (a macOS spotlight-like software) for essential tasks and utilities related to Soroban development.
 
+
+
+
+
+| Soracast View  | Soracast Detail  |
+|---|---|
+| ![1](https://github.com/utkucy/soracast/assets/41550693/d57b5c1d-3ef8-477f-999b-7f0f84039b48)  | ![2](https://github.com/utkucy/soracast/assets/41550693/be96a390-89f4-4cdb-8eb4-03599ee95d47)  |
+
+
 ## Features
 
 ### Account Management
@@ -37,10 +46,10 @@ The Soroban Raycast Extension is a powerful productivity tool designed to simpli
 - Filter events based on contract IDs, topic filters, and event types
 - Real-time event streaming and updating UI
 
-### Custom Code Snippets for Soroban CLI
+### Custom Common Snippets for Soroban CLI
 
-- Save, manage, and execute frequently used Soroban CLI commands and code snippets
-- Persistent storage of code snippets
+- Save, manage, and execute frequently used Soroban CLI commands
+- Persistent storage of common snippets
 
 ## Installation
 
