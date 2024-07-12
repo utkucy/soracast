@@ -8,16 +8,25 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "Soracast",
-      "description": "",
-      "mode": "view"
+      "name": "fundAccount",
+      "title": "Fund Account",
+      "description": "Fund a Stellar testnet account",
+      "mode": "view",
+      "component": "./src/commands/fundAccount.tsx"
+    },
+    {
+      "name": "createSorabanProject",
+      "title": "Create Soroban Project",
+      "description": "Create a new Soroban project",
+      "mode": "view",
+      "component": "./src/commands/createSorobanProject.tsx"
     }
   ],
   "tools": null,
   "dependencies": {
     "@raycast/api": "^1.76.0",
-    "axios": "^1.7.2"
+    "axios": "^1.7.2",
+    "stellar-sdk": "^12.1.0"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
