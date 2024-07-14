@@ -1,4 +1,11 @@
 import { exec } from "child_process";
+
+import { getPreferenceValues } from "@raycast/api";
+
+export function getOpenAIApiKey() {
+  const preferences = getPreferenceValues();
+  return preferences.openaiApiKey as string;
+}
 import { promisify } from "util";
 import { showToast, Toast, Alert, confirmAlert, open } from "@raycast/api";
 import path from "path";
@@ -53,7 +60,7 @@ async function promptInstallation(tool: string, url: string): Promise<void> {
   }
 }
 
-export async function runStellarCommand(command: string): Promise<string> {
+export async function runStellarCommand(command: string, pathOption?: string): Promise<string> {
   try {
     const isStellarCLIInstalled = await checkStellarCLIInstalled();
     if (!isStellarCLIInstalled) {
@@ -68,7 +75,7 @@ export async function runStellarCommand(command: string): Promise<string> {
     const { stdout, stderr } = await execAsync(`${stellarPath} ${command}`, {
       // shell: "/bin/bash",
       shell: process.env.SHELL,
-      cwd: path.join(os.homedir(), "Desktop"), // Run the command in the user's desktop directory
+      cwd: pathOption, // Run the command in the user's desktop directory
     });
 
     if (stderr) {

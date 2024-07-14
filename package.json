@@ -11,21 +11,68 @@
       "name": "fundAccount",
       "title": "Fund Account",
       "description": "Fund a Stellar testnet account",
-      "mode": "view",
-      "component": "./src/commands/fundAccount.tsx"
+      "mode": "view"
     },
     {
       "name": "createSorabanProject",
       "title": "Create Soroban Project",
       "description": "Create a new Soroban project",
-      "mode": "view",
-      "component": "./src/commands/createSorobanProject.tsx"
+      "mode": "view"
+    },
+    {
+      "name": "accountInfo",
+      "title": "View Account Info",
+      "description": "View Stellar account information",
+      "mode": "view"
+    },
+    {
+      "name": "deployContract",
+      "title": "Deploy Smart Contract",
+      "description": "Deploy a Soroban smart contract",
+      "mode": "view"
+    },
+    {
+      "name": "addNewKey",
+      "title": "Add New Key",
+      "description": "Add a new key to the Stellar account",
+      "mode": "view"
+    },
+    {
+      "name": "listKeys",
+      "title": "List Keys",
+      "description": "List all keys in the Stellar account",
+      "mode": "view"
+    },
+    {
+      "name": "generateSnippet",
+      "title": "Generate Soroban Code Snippet",
+      "description": "Generate a Soroban code snippet using AI",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "contractDirectories",
+      "title": "Smart Contract Directories",
+      "description": "Comma-separated list of directories to search for WASM files",
+      "type": "textfield",
+      "required": false,
+      "default": ""
+    },
+    {
+      "name": "openaiApiKey",
+      "type": "password",
+      "required": true,
+      "title": "OpenAI API Key",
+      "description": "Your OpenAI API key for generating code snippets"
     }
   ],
   "tools": null,
   "dependencies": {
     "@raycast/api": "^1.76.0",
+    "@stellar/stellar-sdk": "^12.1.0",
     "axios": "^1.7.2",
+    "openai": "^4.52.7",
     "stellar-sdk": "^12.1.0"
   },
   "devDependencies": {
